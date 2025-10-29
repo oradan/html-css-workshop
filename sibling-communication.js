@@ -67,4 +67,58 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('- Favorite buttons are child components');
     console.log('- Parent component manages their state (red heart)');
     console.log('- In Angular: Parent uses @Input() to send state to child');
+    
+    // Smart Component Example - Car Component with Price Calculation
+    // This demonstrates a smart component that manages state and calculations
+    
+    // Get all car items (smart components)
+    const carItems = document.querySelectorAll('.car-item');
+    
+    carItems.forEach(carItem => {
+        const priceDisplay = carItem.querySelector('.price');
+        const basePrice = parseInt(priceDisplay.getAttribute('data-base-price'));
+        const optionChecks = carItem.querySelectorAll('.option-check');
+        const optionsTotal = carItem.querySelector('.options-total');
+        
+        // Add event listeners to each option checkbox (dumb components)
+        optionChecks.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                updateCarPrice(carItem, basePrice, optionChecks, priceDisplay, optionsTotal);
+                
+                const optionName = this.nextElementSibling.textContent;
+                const optionPrice = parseInt(this.getAttribute('data-price'));
+                
+                console.log(`Option "${optionName}" ${this.checked ? 'added' : 'removed'}: $${optionPrice.toLocaleString()}`);
+                console.log('SMART COMPONENT: Car component calculated new total price');
+            });
+        });
+    });
+    
+    function updateCarPrice(carItem, basePrice, optionChecks, priceDisplay, optionsTotal) {
+        let totalOptionsPrice = 0;
+        
+        // Calculate total options price
+        optionChecks.forEach(checkbox => {
+            if (checkbox.checked) {
+                totalOptionsPrice += parseInt(checkbox.getAttribute('data-price'));
+            }
+        });
+        
+        // Update displays
+        const totalPrice = basePrice + totalOptionsPrice;
+        priceDisplay.textContent = `$${totalPrice.toLocaleString()}`;
+        optionsTotal.textContent = `Options: $${totalOptionsPrice.toLocaleString()}`;
+        
+        // Visual feedback for total price change
+        if (totalOptionsPrice > 0) {
+            priceDisplay.style.color = '#e74c3c'; // Red for higher price
+        } else {
+            priceDisplay.style.color = ''; // Default color
+        }
+    }
+    
+    console.log('Smart Component Example Loaded!');
+    console.log('- Car components are SMART (manage state and calculations)');
+    console.log('- Option checkboxes are DUMB (just display and emit events)');
+    console.log('- In Angular: Smart components use services, dumb components use @Input/@Output');
 });

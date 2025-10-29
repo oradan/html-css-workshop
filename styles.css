@@ -259,7 +259,7 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.02);
 }
 
 /* Card Image Styling */
@@ -273,9 +273,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-.card-image:hover {
-    transform: scale(1.02);
-}
 
 /* Featured Card - Special styling for highlighted content */
 .featured-card {
@@ -286,7 +283,7 @@ body {
 }
 
 .featured-card:hover {
-    transform: translateY(-8px);
+    transform: scale(1.02);
     box-shadow: 0 12px 30px rgba(255, 107, 53, 0.6);
 }
 
@@ -342,6 +339,76 @@ body {
 
 .btn.bg-gray.favorited i {
     color: #e74c3c !important;
+}
+
+/* Smart Component - Option Checkboxes */
+.option-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    flex: 1;
+}
+
+.option-check {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.option-check:checked {
+    background: var(--accent-color, #ff6b35);
+    border-color: var(--accent-color, #ff6b35);
+}
+
+.option-check:checked::before {
+    content: '✓';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.option-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.option-item:has(.option-check:checked) {
+    background: #f8f9fa;
+    border-color: var(--accent-color, #ff6b35);
+    transform: translateX(2px);
+}
+
+/* Price Breakdown */
+.price-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.base-price {
+    color: #666;
+}
+
+.options-total {
+    color: var(--accent-color, #ff6b35);
+    font-weight: 600;
 }
 
 .featured-card h3 {
@@ -467,7 +534,6 @@ body {
 }
 
 .car-item:hover {
-    transform: translateY(-8px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
     border-color: rgba(255, 107, 53, 0.3);
 }
@@ -518,14 +584,14 @@ body {
 }
 
 .price {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    color: #fff;
+    color: #fff !important;
     display: inline-block;
-    background: linear-gradient(135deg, #ff6b35, #ff8c42);
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    background: linear-gradient(135deg, #ff6b35, #ff8c42) !important;
+    padding: 0.4rem 0.8rem;
+    border-radius: 18px;
+    box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
     position: relative;
 }
 
@@ -563,7 +629,6 @@ body {
 .option-item:hover {
     background: #f8f9fa;
     border-color: #ff6b35;
-    transform: translateX(2px);
 }
 
 .option-name {
@@ -639,7 +704,6 @@ body {
 
 .spec-item:hover {
     background: linear-gradient(135deg, #e9ecef, #f8f9fa);
-    transform: translateX(3px);
     border-left-color: #ff8c42;
 }
 
