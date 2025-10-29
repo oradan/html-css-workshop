@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // This demonstrates how a parent component manages child component state
     
     // Get all favorite buttons (child components)
-    const favoriteButtons = document.querySelectorAll('.btn.bg-orange');
+    const favoriteButtons = document.querySelectorAll('.btn.bg-gray');
     
     // Add event listeners to each favorite button
     favoriteButtons.forEach(button => {

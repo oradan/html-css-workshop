@@ -329,7 +329,18 @@ body {
 }
 
 /* Parent-Child Component Communication Example - Favorite Buttons */
-.btn.bg-orange.favorited i {
+.btn.bg-gray {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    color: white;
+}
+
+.btn.bg-gray:hover {
+    background: linear-gradient(135deg, #5a6268, #495057);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+}
+
+.btn.bg-gray.favorited i {
     color: #e74c3c !important;
 }
 
