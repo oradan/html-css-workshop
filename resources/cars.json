@@ -1,0 +1,230 @@
+[
+  {
+    "title": "Porsche Taycan",
+    "image": "assets/img_1.jpg",
+    "imageAlt": "Porsche Taycan",
+    "specifications": {
+      "modelYear": "2024",
+      "mileage": "5,200 miles",
+      "engine": "Dual Electric Motors",
+      "power": "560 HP"
+    },
+    "description": "The Porsche Taycan represents the future of luxury electric performance. With lightning-fast acceleration and exceptional build quality.",
+    "pricing": {
+      "basePrice": 89900,
+      "basePriceFormatted": "$89,900"
+    },
+    "options": [
+      {
+        "name": "Premium Paint",
+        "price": 2500,
+        "priceFormatted": "+$2,500"
+      },
+      {
+        "name": "Performance Package",
+        "price": 5200,
+        "priceFormatted": "+$5,200"
+      },
+      {
+        "name": "Carbon Fiber Interior",
+        "price": 3800,
+        "priceFormatted": "+$3,800"
+      },
+      {
+        "name": "Extended Warranty",
+        "price": 2100,
+        "priceFormatted": "+$2,100"
+      }
+    ]
+  },
+  {
+    "title": "Porsche Panamera",
+    "image": "assets/img_2.jpg",
+    "imageAlt": "Porsche Panamera",
+    "specifications": {
+      "modelYear": "2023",
+      "mileage": "12,800 miles",
+      "engine": "4.0L V8 Twin-Turbo",
+      "power": "630 HP"
+    },
+    "description": "The Porsche Panamera combines luxury sedan comfort with sports car performance. Exceptional power and refined craftsmanship.",
+    "pricing": {
+      "basePrice": 112500,
+      "basePriceFormatted": "$112,500"
+    },
+    "options": [
+      {
+        "name": "Sport Chrono Package",
+        "price": 3700,
+        "priceFormatted": "+$3,700"
+      },
+      {
+        "name": "Panoramic Roof",
+        "price": 2890,
+        "priceFormatted": "+$2,890"
+      },
+      {
+        "name": "Premium Audio",
+        "price": 4200,
+        "priceFormatted": "+$4,200"
+      },
+      {
+        "name": "Adaptive Cruise",
+        "price": 1950,
+        "priceFormatted": "+$1,950"
+      }
+    ]
+  },
+  {
+    "title": "Mercedes-AMG GT",
+    "image": "assets/img_3.jpg",
+    "imageAlt": "Mercedes-AMG GT",
+    "specifications": {
+      "modelYear": "2024",
+      "mileage": "3,100 miles",
+      "engine": "4.0L V8 Biturbo",
+      "power": "577 HP"
+    },
+    "description": "The Mercedes-AMG GT embodies racing heritage with aggressive styling and powerful performance capabilities.",
+    "pricing": {
+      "basePrice": 138200,
+      "basePriceFormatted": "$138,200"
+    },
+    "options": [
+      {
+        "name": "AMG Track Package",
+        "price": 6500,
+        "priceFormatted": "+$6,500"
+      },
+      {
+        "name": "Carbon Fiber Trim",
+        "price": 3200,
+        "priceFormatted": "+$3,200"
+      },
+      {
+        "name": "Ceramic Brakes",
+        "price": 8900,
+        "priceFormatted": "+$8,900"
+      },
+      {
+        "name": "Exclusive Interior",
+        "price": 4800,
+        "priceFormatted": "+$4,800"
+      }
+    ]
+  },
+  {
+    "title": "BMW M4 Competition",
+    "image": "assets/img_4.jpg",
+    "imageAlt": "BMW M4 Competition",
+    "specifications": {
+      "modelYear": "2023",
+      "mileage": "8,750 miles",
+      "engine": "3.0L I6 Twin-Turbo",
+      "power": "503 HP"
+    },
+    "description": "The BMW M4 Competition represents peak performance engineering with track-focused precision and cutting-edge technology.",
+    "pricing": {
+      "basePrice": 95400,
+      "basePriceFormatted": "$95,400"
+    },
+    "options": [
+      {
+        "name": "M Performance Parts",
+        "price": 4500,
+        "priceFormatted": "+$4,500"
+      },
+      {
+        "name": "Carbon Fiber Roof",
+        "price": 3600,
+        "priceFormatted": "+$3,600"
+      },
+      {
+        "name": "Harman Kardon Audio",
+        "price": 2300,
+        "priceFormatted": "+$2,300"
+      },
+      {
+        "name": "Driver Assistance",
+        "price": 1800,
+        "priceFormatted": "+$1,800"
+      }
+    ]
+  },
+  {
+    "title": "Audi RS6 Avant",
+    "image": "assets/img_5.jpg",
+    "imageAlt": "Audi RS6 Avant",
+    "specifications": {
+      "modelYear": "2024",
+      "mileage": "6,400 miles",
+      "engine": "4.0L V8 TFSI",
+      "power": "591 HP"
+    },
+    "description": "The Audi RS6 Avant perfectly balances performance and practicality with supercar-level acceleration and estate versatility.",
+    "pricing": {
+      "basePrice": 127800,
+      "basePriceFormatted": "$127,800"
+    },
+    "options": [
+      {
+        "name": "RS Sport Package",
+        "price": 5800,
+        "priceFormatted": "+$5,800"
+      },
+      {
+        "name": "Matrix LED Lights",
+        "price": 2400,
+        "priceFormatted": "+$2,400"
+      },
+      {
+        "name": "Bang & Olufsen Audio",
+        "price": 3900,
+        "priceFormatted": "+$3,900"
+      },
+      {
+        "name": "Dynamic Package",
+        "price": 4200,
+        "priceFormatted": "+$4,200"
+      }
+    ]
+  },
+  {
+    "title": "Ferrari 488 GTB",
+    "image": "assets/img_6.jpg",
+    "imageAlt": "Ferrari 488 GTB",
+    "specifications": {
+      "modelYear": "2022",
+      "mileage": "4,200 miles",
+      "engine": "3.9L V8 Twin-Turbo",
+      "power": "661 HP"
+    },
+    "description": "The Ferrari 488 GTB is a masterpiece of Italian engineering with stunning aesthetics and incredible performance.",
+    "pricing": {
+      "basePrice": 245900,
+      "basePriceFormatted": "$245,900"
+    },
+    "options": [
+      {
+        "name": "Racing Package",
+        "price": 12500,
+        "priceFormatted": "+$12,500"
+      },
+      {
+        "name": "Carbon Fiber Aero",
+        "price": 8900,
+        "priceFormatted": "+$8,900"
+      },
+      {
+        "name": "Premium Interior",
+        "price": 15200,
+        "priceFormatted": "+$15,200"
+      },
+      {
+        "name": "Telemetry System",
+        "price": 6800,
+        "priceFormatted": "+$6,800"
+      }
+    ]
+  }
+]

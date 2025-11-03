@@ -1,524 +1,722 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Car World - Cars</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Car World</a>
-            <div class="nav-right">
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="news.html" class="nav-link">News</a></li>
-                    <li><a href="cars.html" class="nav-link active">Cars</a></li>
-                </ul>
-                <div class="cart-container">
-                    <div  class="cart-link">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-badge" id="cart-counter">0</span>
-                    </div>
-                </div>
+      <div class="nav-container">
+        <a href="index.html" class="logo">Car World</a>
+        <div class="nav-right">
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="news.html" class="nav-link">News</a></li>
+            <li><a href="cars.html" class="nav-link active">Cars</a></li>
+          </ul>
+          <div class="cart-container">
+            <div class="cart-link">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-badge" id="cart-counter">0</span>
             </div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Header Section -->
     <header class="header header-bg-cars">
-        <div class="header-content">
-            <h1>Discover Amazing Cars</h1>
-            <p>Explore our comprehensive collection of vehicles from every category and era</p>
-            <a href="#collection" class="cta-button">Browse Collection</a>
-        </div>
+      <div class="header-content">
+        <h1>Discover Amazing Cars</h1>
+        <p>
+          Explore our comprehensive collection of vehicles from every category
+          and era
+        </p>
+        <a href="#collection" class="cta-button">Browse Collection</a>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Title Description Block -->
-        <div class="title-description-block">
-            <h1 class="page-title">Car Collection</h1>
-            <p class="page-subtitle">
-                Explore our comprehensive collection of vehicles, from classic beauties to cutting-edge modern machines. 
-                Discover detailed specifications, features, and everything you need to know about each car.
+      <!-- Title Description Block -->
+      <div class="title-description-block">
+        <h1 class="page-title">Car Collection</h1>
+        <p class="page-subtitle">
+          Explore our comprehensive collection of vehicles, from classic
+          beauties to cutting-edge modern machines. Discover detailed
+          specifications, features, and everything you need to know about each
+          car.
+        </p>
+      </div>
+
+      <div class="car-showcase" id="collection">
+        <!-- Car Item 1 -->
+        <div class="car-item">
+          <div class="car-image-container">
+            <img
+              src="assets/img_1.jpg"
+              alt="Porsche Taycan"
+              class="car-image"
+            />
+            <div class="favorite-heart">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <div class="car-specs-column">
+            <h3 class="car-title">Porsche Taycan</h3>
+            <div class="car-specs">
+              <div class="spec-item">
+                <span class="spec-label">Model Year:</span>
+                <span class="spec-value">2024</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Mileage:</span>
+                <span class="spec-value">5,200 miles</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Engine:</span>
+                <span class="spec-value">Dual Electric Motors</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Power:</span>
+                <span class="spec-value">560 HP</span>
+              </div>
+            </div>
+            <p class="car-description">
+              The Porsche Taycan represents the future of luxury electric
+              performance. With lightning-fast acceleration and exceptional
+              build quality.
             </p>
+          </div>
+          <div class="car-actions-column">
+            <div class="price-section">
+              <span class="price" data-base-price="89900">$89,900</span>
+              <div class="price-breakdown">
+                <span class="base-price">Base: $89,900</span>
+                <span class="options-total">Options: $0</span>
+              </div>
+            </div>
+            <div class="options-section">
+              <h4 class="options-title">Available Options</h4>
+              <div class="options-list">
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="2500"
+                    />
+                    <span class="option-name">Premium Paint</span>
+                  </label>
+                  <span class="option-price">+$2,500</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="5200"
+                    />
+                    <span class="option-name">Performance Package</span>
+                  </label>
+                  <span class="option-price">+$5,200</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="3800"
+                    />
+                    <span class="option-name">Carbon Fiber Interior</span>
+                  </label>
+                  <span class="option-price">+$3,800</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="2100"
+                    />
+                    <span class="option-name">Extended Warranty</span>
+                  </label>
+                  <span class="option-price">+$2,100</span>
+                </div>
+              </div>
+            </div>
+            <div class="car-actions">
+              <button class="btn bg-gray">
+                <i class="fas fa-heart"></i> Add to Favorites
+              </button>
+              <button
+                class="btn bg-green add-to-cart-btn"
+                data-car="Porsche Taycan"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="car-showcase" id="collection">
-            <!-- Car Item 1 -->
-            <div class="car-item">
-                <div class="car-image-container">
-                    <img src="assets/img_1.jpg" alt="Porsche Taycan" class="car-image">
-                </div>
-                <div class="car-specs-column">
-                    <h3 class="car-title">Porsche Taycan</h3>
-                    <div class="car-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Model Year:</span>
-                            <span class="spec-value">2024</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Mileage:</span>
-                            <span class="spec-value">5,200 miles</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Engine:</span>
-                            <span class="spec-value">Dual Electric Motors</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Power:</span>
-                            <span class="spec-value">560 HP</span>
-                        </div>
-                    </div>
-                    <p class="car-description">
-                        The Porsche Taycan represents the future of luxury electric performance. With lightning-fast acceleration and exceptional build quality.
-                    </p>
-                </div>
-                <div class="car-actions-column">
-                    <div class="price-section">
-                        <span class="price" data-base-price="89900">$89,900</span>
-                        <div class="price-breakdown">
-                            <span class="base-price">Base: $89,900</span>
-                            <span class="options-total">Options: $0</span>
-                        </div>
-                    </div>
-                    <div class="options-section">
-                        <h4 class="options-title">Available Options</h4>
-                        <div class="options-list">
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="2500">
-                                    <span class="option-name">Premium Paint</span>
-                                </label>
-                                <span class="option-price">+$2,500</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="5200">
-                                    <span class="option-name">Performance Package</span>
-                                </label>
-                                <span class="option-price">+$5,200</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="3800">
-                                    <span class="option-name">Carbon Fiber Interior</span>
-                                </label>
-                                <span class="option-price">+$3,800</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="2100">
-                                    <span class="option-name">Extended Warranty</span>
-                                </label>
-                                <span class="option-price">+$2,100</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="car-actions">
-                        <button class="btn bg-gray"><i class="fas fa-heart"></i> Add to Favorites</button>
-                        <button class="btn bg-green add-to-cart-btn" data-car="Porsche Taycan"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
-                </div>
+        <!-- Car Item 2 -->
+        <div class="car-item">
+          <div class="car-image-container">
+            <img
+              src="assets/img_2.jpg"
+              alt="Porsche Panamera"
+              class="car-image"
+            />
+            <div class="favorite-heart">
+              <i class="fas fa-heart"></i>
             </div>
-
-            <!-- Car Item 2 -->
-            <div class="car-item">
-                <div class="car-image-container">
-                    <img src="assets/img_2.jpg" alt="Porsche Panamera" class="car-image">
-                </div>
-                <div class="car-specs-column">
-                    <h3 class="car-title">Porsche Panamera</h3>
-                    <div class="car-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Model Year:</span>
-                            <span class="spec-value">2023</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Mileage:</span>
-                            <span class="spec-value">12,800 miles</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Engine:</span>
-                            <span class="spec-value">4.0L V8 Twin-Turbo</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Power:</span>
-                            <span class="spec-value">630 HP</span>
-                        </div>
-                    </div>
-                    <p class="car-description">
-                        The Porsche Panamera combines luxury sedan comfort with sports car performance. Exceptional power and refined craftsmanship.
-                    </p>
-                </div>
-                <div class="car-actions-column">
-                    <div class="price-section">
-                        <span class="price" data-base-price="112500">$112,500</span>
-                        <div class="price-breakdown">
-                            <span class="base-price">Base: $112,500</span>
-                            <span class="options-total">Options: $0</span>
-                        </div>
-                    </div>
-                    <div class="options-section">
-                        <h4 class="options-title">Available Options</h4>
-                        <div class="options-list">
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="3700">
-                                    <span class="option-name">Sport Chrono Package</span>
-                                </label>
-                                <span class="option-price">+$3,700</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="2890">
-                                    <span class="option-name">Panoramic Roof</span>
-                                </label>
-                                <span class="option-price">+$2,890</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="4200">
-                                    <span class="option-name">Premium Audio</span>
-                                </label>
-                                <span class="option-price">+$4,200</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="1950">
-                                    <span class="option-name">Adaptive Cruise</span>
-                                </label>
-                                <span class="option-price">+$1,950</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="car-actions">
-                        <button class="btn bg-gray"><i class="fas fa-heart"></i> Add to Favorites</button>
-                        <button class="btn bg-green add-to-cart-btn" data-car="Porsche Panamera"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
-                </div>
+          </div>
+          <div class="car-specs-column">
+            <h3 class="car-title">Porsche Panamera</h3>
+            <div class="car-specs">
+              <div class="spec-item">
+                <span class="spec-label">Model Year:</span>
+                <span class="spec-value">2023</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Mileage:</span>
+                <span class="spec-value">12,800 miles</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Engine:</span>
+                <span class="spec-value">4.0L V8 Twin-Turbo</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Power:</span>
+                <span class="spec-value">630 HP</span>
+              </div>
             </div>
-
-            <!-- Car Item 3 -->
-            <div class="car-item">
-                <div class="car-image-container">
-                    <img src="assets/img_3.jpg" alt="Mercedes-AMG GT" class="car-image">
-                </div>
-                <div class="car-specs-column">
-                    <h3 class="car-title">Mercedes-AMG GT</h3>
-                    <div class="car-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Model Year:</span>
-                            <span class="spec-value">2024</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Mileage:</span>
-                            <span class="spec-value">3,100 miles</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Engine:</span>
-                            <span class="spec-value">4.0L V8 Biturbo</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Power:</span>
-                            <span class="spec-value">577 HP</span>
-                        </div>
-                    </div>
-                    <p class="car-description">
-                        The Mercedes-AMG GT embodies racing heritage with aggressive styling and powerful performance capabilities.
-                    </p>
-                </div>
-                <div class="car-actions-column">
-                    <div class="price-section">
-                        <span class="price" data-base-price="138200">$138,200</span>
-                        <div class="price-breakdown">
-                            <span class="base-price">Base: $138,200</span>
-                            <span class="options-total">Options: $0</span>
-                        </div>
-                    </div>
-                    <div class="options-section">
-                        <h4 class="options-title">Available Options</h4>
-                        <div class="options-list">
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="6500">
-                                    <span class="option-name">AMG Track Package</span>
-                                </label>
-                                <span class="option-price">+$6,500</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="3200">
-                                    <span class="option-name">Carbon Fiber Trim</span>
-                                </label>
-                                <span class="option-price">+$3,200</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="8900">
-                                    <span class="option-name">Ceramic Brakes</span>
-                                </label>
-                                <span class="option-price">+$8,900</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="4800">
-                                    <span class="option-name">Exclusive Interior</span>
-                                </label>
-                                <span class="option-price">+$4,800</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="car-actions">
-                        <button class="btn bg-gray"><i class="fas fa-heart"></i> Add to Favorites</button>
-                        <button class="btn bg-green add-to-cart-btn" data-car="Mercedes-AMG GT"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
-                </div>
+            <p class="car-description">
+              The Porsche Panamera combines luxury sedan comfort with sports car
+              performance. Exceptional power and refined craftsmanship.
+            </p>
+          </div>
+          <div class="car-actions-column">
+            <div class="price-section">
+              <span class="price" data-base-price="112500">$112,500</span>
+              <div class="price-breakdown">
+                <span class="base-price">Base: $112,500</span>
+                <span class="options-total">Options: $0</span>
+              </div>
             </div>
-
-            <!-- Car Item 4 -->
-            <div class="car-item">
-                <div class="car-image-container">
-                    <img src="assets/img_4.jpg" alt="BMW M4 Competition" class="car-image">
+            <div class="options-section">
+              <h4 class="options-title">Available Options</h4>
+              <div class="options-list">
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="3700"
+                    />
+                    <span class="option-name">Sport Chrono Package</span>
+                  </label>
+                  <span class="option-price">+$3,700</span>
                 </div>
-                <div class="car-specs-column">
-                    <h3 class="car-title">BMW M4 Competition</h3>
-                    <div class="car-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Model Year:</span>
-                            <span class="spec-value">2023</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Mileage:</span>
-                            <span class="spec-value">8,750 miles</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Engine:</span>
-                            <span class="spec-value">3.0L I6 Twin-Turbo</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Power:</span>
-                            <span class="spec-value">503 HP</span>
-                        </div>
-                    </div>
-                    <p class="car-description">
-                        The BMW M4 Competition represents peak performance engineering with track-focused precision and cutting-edge technology.
-                    </p>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="2890"
+                    />
+                    <span class="option-name">Panoramic Roof</span>
+                  </label>
+                  <span class="option-price">+$2,890</span>
                 </div>
-                <div class="car-actions-column">
-                    <div class="price-section">
-                        <span class="price" data-base-price="95400">$95,400</span>
-                        <div class="price-breakdown">
-                            <span class="base-price">Base: $95,400</span>
-                            <span class="options-total">Options: $0</span>
-                        </div>
-                    </div>
-                    <div class="options-section">
-                        <h4 class="options-title">Available Options</h4>
-                        <div class="options-list">
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="4500">
-                                    <span class="option-name">M Performance Parts</span>
-                                </label>
-                                <span class="option-price">+$4,500</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="3600">
-                                    <span class="option-name">Carbon Fiber Roof</span>
-                                </label>
-                                <span class="option-price">+$3,600</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="2300">
-                                    <span class="option-name">Harman Kardon Audio</span>
-                                </label>
-                                <span class="option-price">+$2,300</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="1800">
-                                    <span class="option-name">Driver Assistance</span>
-                                </label>
-                                <span class="option-price">+$1,800</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="car-actions">
-                        <button class="btn bg-gray"><i class="fas fa-heart"></i> Add to Favorites</button>
-                        <button class="btn bg-green add-to-cart-btn" data-car="BMW M4 Competition"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="4200"
+                    />
+                    <span class="option-name">Premium Audio</span>
+                  </label>
+                  <span class="option-price">+$4,200</span>
                 </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="1950"
+                    />
+                    <span class="option-name">Adaptive Cruise</span>
+                  </label>
+                  <span class="option-price">+$1,950</span>
+                </div>
+              </div>
             </div>
-
-            <!-- Car Item 5 -->
-            <div class="car-item">
-                <div class="car-image-container">
-                    <img src="assets/img_5.jpg" alt="Audi RS6 Avant" class="car-image">
-                </div>
-                <div class="car-specs-column">
-                    <h3 class="car-title">Audi RS6 Avant</h3>
-                    <div class="car-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Model Year:</span>
-                            <span class="spec-value">2024</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Mileage:</span>
-                            <span class="spec-value">6,400 miles</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Engine:</span>
-                            <span class="spec-value">4.0L V8 TFSI</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Power:</span>
-                            <span class="spec-value">591 HP</span>
-                        </div>
-                    </div>
-                    <p class="car-description">
-                        The Audi RS6 Avant perfectly balances performance and practicality with supercar-level acceleration and estate versatility.
-                    </p>
-                </div>
-                <div class="car-actions-column">
-                    <div class="price-section">
-                        <span class="price" data-base-price="127800">$127,800</span>
-                        <div class="price-breakdown">
-                            <span class="base-price">Base: $127,800</span>
-                            <span class="options-total">Options: $0</span>
-                        </div>
-                    </div>
-                    <div class="options-section">
-                        <h4 class="options-title">Available Options</h4>
-                        <div class="options-list">
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="5800">
-                                    <span class="option-name">RS Sport Package</span>
-                                </label>
-                                <span class="option-price">+$5,800</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="2400">
-                                    <span class="option-name">Matrix LED Lights</span>
-                                </label>
-                                <span class="option-price">+$2,400</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="3900">
-                                    <span class="option-name">Bang & Olufsen Audio</span>
-                                </label>
-                                <span class="option-price">+$3,900</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="4200">
-                                    <span class="option-name">Dynamic Package</span>
-                                </label>
-                                <span class="option-price">+$4,200</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="car-actions">
-                        <button class="btn bg-gray"><i class="fas fa-heart"></i> Add to Favorites</button>
-                        <button class="btn bg-green add-to-cart-btn" data-car="Audi RS6 Avant"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
-                </div>
+            <div class="car-actions">
+              <button class="btn bg-gray">
+                <i class="fas fa-heart"></i> Add to Favorites
+              </button>
+              <button
+                class="btn bg-green add-to-cart-btn"
+                data-car="Porsche Panamera"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
             </div>
-
-            <!-- Car Item 6 -->
-            <div class="car-item">
-                <div class="car-image-container">
-                    <img src="assets/img_6.jpg" alt="Ferrari 488 GTB" class="car-image">
-                </div>
-                <div class="car-specs-column">
-                    <h3 class="car-title">Ferrari 488 GTB</h3>
-                    <div class="car-specs">
-                        <div class="spec-item">
-                            <span class="spec-label">Model Year:</span>
-                            <span class="spec-value">2022</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Mileage:</span>
-                            <span class="spec-value">4,200 miles</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Engine:</span>
-                            <span class="spec-value">3.9L V8 Twin-Turbo</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Power:</span>
-                            <span class="spec-value">661 HP</span>
-                        </div>
-                    </div>
-                    <p class="car-description">
-                        The Ferrari 488 GTB is a masterpiece of Italian engineering with stunning aesthetics and incredible performance.
-                    </p>
-                </div>
-                <div class="car-actions-column">
-                    <div class="price-section">
-                        <span class="price" data-base-price="245900">$245,900</span>
-                        <div class="price-breakdown">
-                            <span class="base-price">Base: $245,900</span>
-                            <span class="options-total">Options: $0</span>
-                        </div>
-                    </div>
-                    <div class="options-section">
-                        <h4 class="options-title">Available Options</h4>
-                        <div class="options-list">
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="12500">
-                                    <span class="option-name">Racing Package</span>
-                                </label>
-                                <span class="option-price">+$12,500</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="8900">
-                                    <span class="option-name">Carbon Fiber Aero</span>
-                                </label>
-                                <span class="option-price">+$8,900</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="15200">
-                                    <span class="option-name">Premium Interior</span>
-                                </label>
-                                <span class="option-price">+$15,200</span>
-                            </div>
-                            <div class="option-item">
-                                <label class="option-checkbox">
-                                    <input type="checkbox" class="option-check" data-price="6800">
-                                    <span class="option-name">Telemetry System</span>
-                                </label>
-                                <span class="option-price">+$6,800</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="car-actions">
-                        <button class="btn bg-gray"><i class="fas fa-heart"></i> Add to Favorites</button>
-                        <button class="btn bg-green add-to-cart-btn" data-car="Ferrari 488 GTB"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <!-- Car Item 3 -->
+        <div class="car-item">
+          <div class="car-image-container">
+            <img
+              src="assets/img_3.jpg"
+              alt="Mercedes-AMG GT"
+              class="car-image"
+            />
+            <div class="favorite-heart">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <div class="car-specs-column">
+            <h3 class="car-title">Mercedes-AMG GT</h3>
+            <div class="car-specs">
+              <div class="spec-item">
+                <span class="spec-label">Model Year:</span>
+                <span class="spec-value">2024</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Mileage:</span>
+                <span class="spec-value">3,100 miles</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Engine:</span>
+                <span class="spec-value">4.0L V8 Biturbo</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Power:</span>
+                <span class="spec-value">577 HP</span>
+              </div>
+            </div>
+            <p class="car-description">
+              The Mercedes-AMG GT embodies racing heritage with aggressive
+              styling and powerful performance capabilities.
+            </p>
+          </div>
+          <div class="car-actions-column">
+            <div class="price-section">
+              <span class="price" data-base-price="138200">$138,200</span>
+              <div class="price-breakdown">
+                <span class="base-price">Base: $138,200</span>
+                <span class="options-total">Options: $0</span>
+              </div>
+            </div>
+            <div class="options-section">
+              <h4 class="options-title">Available Options</h4>
+              <div class="options-list">
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="6500"
+                    />
+                    <span class="option-name">AMG Track Package</span>
+                  </label>
+                  <span class="option-price">+$6,500</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="3200"
+                    />
+                    <span class="option-name">Carbon Fiber Trim</span>
+                  </label>
+                  <span class="option-price">+$3,200</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="8900"
+                    />
+                    <span class="option-name">Ceramic Brakes</span>
+                  </label>
+                  <span class="option-price">+$8,900</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="4800"
+                    />
+                    <span class="option-name">Exclusive Interior</span>
+                  </label>
+                  <span class="option-price">+$4,800</span>
+                </div>
+              </div>
+            </div>
+            <div class="car-actions">
+              <button class="btn bg-gray">
+                <i class="fas fa-heart"></i> Add to Favorites
+              </button>
+              <button
+                class="btn bg-green add-to-cart-btn"
+                data-car="Mercedes-AMG GT"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car Item 4 -->
+        <div class="car-item">
+          <div class="car-image-container">
+            <img
+              src="assets/img_4.jpg"
+              alt="BMW M4 Competition"
+              class="car-image"
+            />
+            <div class="favorite-heart">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <div class="car-specs-column">
+            <h3 class="car-title">BMW M4 Competition</h3>
+            <div class="car-specs">
+              <div class="spec-item">
+                <span class="spec-label">Model Year:</span>
+                <span class="spec-value">2023</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Mileage:</span>
+                <span class="spec-value">8,750 miles</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Engine:</span>
+                <span class="spec-value">3.0L I6 Twin-Turbo</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Power:</span>
+                <span class="spec-value">503 HP</span>
+              </div>
+            </div>
+            <p class="car-description">
+              The BMW M4 Competition represents peak performance engineering
+              with track-focused precision and cutting-edge technology.
+            </p>
+          </div>
+          <div class="car-actions-column">
+            <div class="price-section">
+              <span class="price" data-base-price="95400">$95,400</span>
+              <div class="price-breakdown">
+                <span class="base-price">Base: $95,400</span>
+                <span class="options-total">Options: $0</span>
+              </div>
+            </div>
+            <div class="options-section">
+              <h4 class="options-title">Available Options</h4>
+              <div class="options-list">
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="4500"
+                    />
+                    <span class="option-name">M Performance Parts</span>
+                  </label>
+                  <span class="option-price">+$4,500</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="3600"
+                    />
+                    <span class="option-name">Carbon Fiber Roof</span>
+                  </label>
+                  <span class="option-price">+$3,600</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="2300"
+                    />
+                    <span class="option-name">Harman Kardon Audio</span>
+                  </label>
+                  <span class="option-price">+$2,300</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="1800"
+                    />
+                    <span class="option-name">Driver Assistance</span>
+                  </label>
+                  <span class="option-price">+$1,800</span>
+                </div>
+              </div>
+            </div>
+            <div class="car-actions">
+              <button class="btn bg-gray">
+                <i class="fas fa-heart"></i> Add to Favorites
+              </button>
+              <button
+                class="btn bg-green add-to-cart-btn"
+                data-car="BMW M4 Competition"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car Item 5 -->
+        <div class="car-item">
+          <div class="car-image-container">
+            <img
+              src="assets/img_5.jpg"
+              alt="Audi RS6 Avant"
+              class="car-image"
+            />
+            <div class="favorite-heart">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <div class="car-specs-column">
+            <h3 class="car-title">Audi RS6 Avant</h3>
+            <div class="car-specs">
+              <div class="spec-item">
+                <span class="spec-label">Model Year:</span>
+                <span class="spec-value">2024</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Mileage:</span>
+                <span class="spec-value">6,400 miles</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Engine:</span>
+                <span class="spec-value">4.0L V8 TFSI</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Power:</span>
+                <span class="spec-value">591 HP</span>
+              </div>
+            </div>
+            <p class="car-description">
+              The Audi RS6 Avant perfectly balances performance and practicality
+              with supercar-level acceleration and estate versatility.
+            </p>
+          </div>
+          <div class="car-actions-column">
+            <div class="price-section">
+              <span class="price" data-base-price="127800">$127,800</span>
+              <div class="price-breakdown">
+                <span class="base-price">Base: $127,800</span>
+                <span class="options-total">Options: $0</span>
+              </div>
+            </div>
+            <div class="options-section">
+              <h4 class="options-title">Available Options</h4>
+              <div class="options-list">
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="5800"
+                    />
+                    <span class="option-name">RS Sport Package</span>
+                  </label>
+                  <span class="option-price">+$5,800</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="2400"
+                    />
+                    <span class="option-name">Matrix LED Lights</span>
+                  </label>
+                  <span class="option-price">+$2,400</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="3900"
+                    />
+                    <span class="option-name">Bang & Olufsen Audio</span>
+                  </label>
+                  <span class="option-price">+$3,900</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="4200"
+                    />
+                    <span class="option-name">Dynamic Package</span>
+                  </label>
+                  <span class="option-price">+$4,200</span>
+                </div>
+              </div>
+            </div>
+            <div class="car-actions">
+              <button class="btn bg-gray">
+                <i class="fas fa-heart"></i> Add to Favorites
+              </button>
+              <button
+                class="btn bg-green add-to-cart-btn"
+                data-car="Audi RS6 Avant"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car Item 6 -->
+        <div class="car-item">
+          <div class="car-image-container">
+            <img
+              src="assets/img_6.jpg"
+              alt="Ferrari 488 GTB"
+              class="car-image"
+            />
+            <div class="favorite-heart">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <div class="car-specs-column">
+            <h3 class="car-title">Ferrari 488 GTB</h3>
+            <div class="car-specs">
+              <div class="spec-item">
+                <span class="spec-label">Model Year:</span>
+                <span class="spec-value">2022</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Mileage:</span>
+                <span class="spec-value">4,200 miles</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Engine:</span>
+                <span class="spec-value">3.9L V8 Twin-Turbo</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Power:</span>
+                <span class="spec-value">661 HP</span>
+              </div>
+            </div>
+            <p class="car-description">
+              The Ferrari 488 GTB is a masterpiece of Italian engineering with
+              stunning aesthetics and incredible performance.
+            </p>
+          </div>
+          <div class="car-actions-column">
+            <div class="price-section">
+              <span class="price" data-base-price="245900">$245,900</span>
+              <div class="price-breakdown">
+                <span class="base-price">Base: $245,900</span>
+                <span class="options-total">Options: $0</span>
+              </div>
+            </div>
+            <div class="options-section">
+              <h4 class="options-title">Available Options</h4>
+              <div class="options-list">
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="12500"
+                    />
+                    <span class="option-name">Racing Package</span>
+                  </label>
+                  <span class="option-price">+$12,500</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="8900"
+                    />
+                    <span class="option-name">Carbon Fiber Aero</span>
+                  </label>
+                  <span class="option-price">+$8,900</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="15200"
+                    />
+                    <span class="option-name">Premium Interior</span>
+                  </label>
+                  <span class="option-price">+$15,200</span>
+                </div>
+                <div class="option-item">
+                  <label class="option-checkbox">
+                    <input
+                      type="checkbox"
+                      class="option-check"
+                      data-price="6800"
+                    />
+                    <span class="option-name">Telemetry System</span>
+                  </label>
+                  <span class="option-price">+$6,800</span>
+                </div>
+              </div>
+            </div>
+            <div class="car-actions">
+              <button class="btn bg-gray">
+                <i class="fas fa-heart"></i> Add to Favorites
+              </button>
+              <button
+                class="btn bg-green add-to-cart-btn"
+                data-car="Ferrari 488 GTB"
+              >
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Car World. All rights reserved. | Driving passion, one car at a time.</p>
+      <p>
+        &copy; 2025 Car World. All rights reserved. | Driving passion, one car
+        at a time.
+      </p>
     </footer>
-    
+
     <!-- Sibling Communication Example Script -->
     <script src="sibling-communication.js"></script>
-</body>
+  </body>
 </html>
