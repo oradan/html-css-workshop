@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* common css => starts */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,55 @@ body {
   background-color: #f8f9fa;
 }
 
-/* Navigation styles */
+.main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Title Description Block - Reusable component for Angular conversion */
+.title-description-block {
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dashed-border {
+  border: 2px dashed #e0e0e0;
+  border-radius: 10px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.favorite i {
+  color: #c21a09;
+}
+
+/* common css => ends */
+
+/* Navigation styles => starts */
 .navbar {
   background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
   padding: 1rem 0;
@@ -74,6 +122,377 @@ body {
 .nav-link.active {
   background-color: #ff6b35;
 }
+
+/* Navigation styles => ends */
+
+/* Header section styles => starts */
+.header {
+  position: relative;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-bg-default {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./assets/header-bg.jpg");
+}
+
+.header-bg-cars {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./assets/header-bg-cars.jpg");
+}
+
+.header-content {
+  color: white;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.header-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Header section styles => ends */
+
+/* Button style => start*/
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #2c2c2c 0%, #3d3d3d 100%);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  color: #ff6b35;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+  color: #e55a2b;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.btn-orange {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8f65 100%);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.btn-orange:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+}
+
+.btn i {
+  margin-right: 0.5rem;
+}
+
+/* Button style => ends*/
+
+/*Card item => starts*/
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card.featured h3 {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card.featured p {
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card.featured {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8f65 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.card.featured:hover {
+  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.6);
+}
+
+.card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/*Card item => ends*/
+
+/*Car Item => starts*/
+
+.car-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 4rem;
+  padding: 0 1rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.car-item {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.car-item:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+.car-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  background: #f8f9fa;
+}
+
+.car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.car-item:hover .car-image {
+  transform: scale(1.05);
+}
+
+.car-specs-column {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.car-actions-column {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  margin-top: auto;
+}
+
+.price-section {
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff !important;
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b35, #ff8c42) !important;
+  padding: 0.4rem 0.8rem;
+  border-radius: 18px;
+  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+  position: relative;
+}
+
+.options-section {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.options-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.option-item:hover {
+  background: #f8f9fa;
+  border-color: #ff6b35;
+}
+
+.option-name {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.option-price {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ff6b35;
+}
+
+.car-details {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.car-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.car-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 8px;
+  border-left: 3px solid #ff6b35;
+  transition: all 0.3s ease;
+}
+
+.spec-item:hover {
+  background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+  border-left-color: #ff8c42;
+}
+
+.spec-label {
+  font-weight: 600;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.spec-value {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 0.85rem;
+}
+
+.car-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  font-size: 0.9rem;
+}
+
+.car-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.price-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.base-price {
+  color: #666;
+}
+
+.options-total {
+  color: var(--accent-color, #ff6b35);
+  font-weight: 600;
+}
+
+/*Car Item => ends*/
 
 /* Cart Container */
 .cart-container {
@@ -145,204 +564,7 @@ body {
   }
 }
 
-/* Header section styles */
-.header {
-  position: relative;
-  height: 70vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Header Background Variants */
-.header-bg-default {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./assets/header-bg.jpg");
-}
-
-.header-bg-cars {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./assets/header-bg-cars.jpg");
-}
-
-.header-content {
-  color: white;
-  max-width: 800px;
-  padding: 2rem;
-}
-
-.header h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  letter-spacing: 2px;
-}
-
-.header p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-}
-/* this is a large btn */
-.cta-button {
-  display: inline-block;
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8f65 100%);
-  color: white;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-}
-
-.cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
-}
-
-/* Main content styles */
-.main-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  text-align: center;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  min-height: 100vh;
-}
-
-/* Title Description Block - Reusable component for Angular conversion */
-.title-description-block {
-  margin-bottom: 4rem;
-  padding: 2rem 0;
-}
-
-.dashed-border {
-  border: 2px dashed #e0e0e0;
-  border-radius: 10px;
-}
-
-.page-title {
-  font-size: 2.5rem;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.page-subtitle {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 3rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Features section (for future content) */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 4rem;
-}
-
-.card {
-  background: white;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-/* Card Image Styling */
-.card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin: 1rem 0;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-/* Featured Card - Special styling for highlighted content */
-.featured-card {
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8f65 100%);
-  color: white;
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.featured-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.6);
-}
-
-/* Sibling Component Communication Example - Like Buttons */
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.like-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: none;
-  border: 2px solid #e9ecef;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.like-btn:hover {
-  border-color: #ff6b35;
-  color: #ff6b35;
-  transform: scale(1.05);
-}
-
-.like-btn.liked {
-  border-color: #ff6b35;
-  background: #ff6b35;
-  color: white;
-}
-
-.like-btn.liked i {
-  color: white;
-}
-
-/* Parent-Child Component Communication Example - Favorite Buttons */
-.btn.bg-gray {
-  background: linear-gradient(135deg, #6c757d, #5a6268);
-  color: white;
-}
-
-.btn.bg-gray:hover {
-  background: linear-gradient(135deg, #5a6268, #495057);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
-}
-
-.btn.bg-gray.favorited i {
-  color: #e74c3c !important;
-}
-
-/* Smart Component - Option Checkboxes */
+/* Option Checkboxes => starts */
 .option-checkbox {
   display: flex;
   align-items: center;
@@ -393,427 +615,7 @@ body {
   border-color: var(--accent-color, #ff6b35);
   transform: translateX(2px);
 }
-
-/* Price Breakdown */
-.price-breakdown {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.base-price {
-  color: #666;
-}
-
-.options-total {
-  color: var(--accent-color, #ff6b35);
-  font-weight: 600;
-}
-
-.featured-card h3 {
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.featured-card p {
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-/* Generic Button Component - Reusable button styling */
-.btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  border: none;
-  cursor: pointer;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(135deg, #2c2c2c 0%, #3d3d3d 100%);
-}
-
-/* Featured Button Variant - Special styling for featured elements */
-.btn-featured {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-  color: #ff6b35;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-}
-
-.btn-featured:hover {
-  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
-  color: #e55a2b;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-}
-
-/* Button Variants for Actions */
-.btn-favorite {
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8f65 100%);
-  color: white;
-}
-
-.btn-favorite:hover {
-  background: linear-gradient(135deg, #e55a2b 0%, #ff6b35 100%);
-  transform: translateY(-2px);
-}
-
-.btn-cart {
-  background: linear-gradient(135deg, #28a745 0%, #34ce57 100%);
-  color: white;
-}
-
-.btn-cart:hover {
-  background: linear-gradient(135deg, #218838 0%, #28a745 100%);
-  transform: translateY(-2px);
-}
-
-/* Simple Background Color Classes */
-.bg-orange {
-  background: #ff6b35 !important;
-}
-
-.bg-orange:hover {
-  background: #e55a2b !important;
-}
-
-.bg-green {
-  background: #28a745 !important;
-}
-
-.bg-green:hover {
-  background: #218838 !important;
-}
-
-.bg-black {
-  background: #1a1a1a !important;
-}
-
-.bg-black:hover {
-  background: #2c2c2c !important;
-}
-
-/* Icon spacing in buttons */
-.btn i {
-  margin-right: 0.5rem;
-}
-
-/* Car Showcase Section */
-.car-showcase {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
-  margin-top: 4rem;
-  padding: 0 1rem;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.car-item {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  position: relative;
-}
-
-.car-item:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  border-color: rgba(255, 107, 53, 0.3);
-}
-
-.car-image-container {
-  position: relative;
-  overflow: hidden;
-  height: 280px;
-  background: #f8f9fa;
-}
-
-.car-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.car-item:hover .car-image {
-  transform: scale(1.05);
-}
-
-/* Favorite Heart Overlay */
-.favorite-heart {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.favorite-heart i {
-  font-size: 20px;
-  color: #ddd;
-  transition: color 0.3s ease;
-}
-
-.favorite-heart:hover {
-  background: rgba(255, 255, 255, 1);
-  transform: scale(1.1);
-}
-
-.favorite-heart:hover i {
-  color: #ff6b6b;
-}
-
-/* When favorited */
-.car-item.favorited .favorite-heart i {
-  color: #e74c3c;
-}
-
-.car-item.favorited .favorite-heart {
-  background: rgba(255, 255, 255, 1);
-}
-
-/* Car Specifications Column */
-.car-specs-column {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-grow: 1;
-}
-
-/* Car Actions Column */
-.car-actions-column {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: #f8f9fa;
-  border-top: 1px solid #e9ecef;
-  margin-top: auto;
-}
-
-/* Price Section */
-.price-section {
-  text-align: center;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.price {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #fff !important;
-  display: inline-block;
-  background: linear-gradient(135deg, #ff6b35, #ff8c42) !important;
-  padding: 0.4rem 0.8rem;
-  border-radius: 18px;
-  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
-  position: relative;
-}
-
-/* Options Section */
-.options-section {
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.options-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 0.8rem;
-  text-align: center;
-}
-
-.options-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.option-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.6rem;
-  background: white;
-  border: 1px solid #e9ecef;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.option-item:hover {
-  background: #f8f9fa;
-  border-color: #ff6b35;
-}
-
-.option-name {
-  font-size: 0.8rem;
-  color: #666;
-  font-weight: 500;
-}
-
-.option-price {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #ff6b35;
-}
-
-/* Rating Section */
-.rating-section {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.rating {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.rating i {
-  color: #ffc107;
-  font-size: 1rem;
-}
-
-.rating-text {
-  font-weight: 600;
-  color: #333;
-  margin-left: 0.5rem;
-  font-size: 1rem;
-}
-
-.car-details {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.car-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-  line-height: 1.3;
-}
-
-.car-specs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-.spec-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem;
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-  border-radius: 8px;
-  border-left: 3px solid #ff6b35;
-  transition: all 0.3s ease;
-}
-
-.spec-item:hover {
-  background: linear-gradient(135deg, #e9ecef, #f8f9fa);
-  border-left-color: #ff8c42;
-}
-
-.spec-label {
-  font-weight: 600;
-  color: #666;
-  font-size: 0.8rem;
-}
-
-.spec-value {
-  font-weight: 700;
-  color: #1a1a1a;
-  font-size: 0.85rem;
-}
-
-.car-description {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  flex-grow: 1;
-  font-size: 0.9rem;
-}
-
-.car-actions {
-  display: flex;
-  flex-direction: row;
-  gap: 0.8rem;
-  width: 100%;
-}
-
-.car-actions .btn {
-  flex: 1;
-  margin-top: 0;
-  text-align: center;
-  font-size: 0.8rem;
-  padding: 0.7rem 0.8rem;
-  width: 100%;
-  border-radius: 8px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.car-actions .btn.bg-orange {
-  background: linear-gradient(135deg, #ff6b35, #ff8c42);
-  color: white;
-}
-
-.car-actions .btn.bg-orange:hover {
-  background: linear-gradient(135deg, #ff8c42, #ff6b35);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-}
-
-.car-actions .btn.bg-green {
-  background: linear-gradient(135deg, #28a745, #20c997);
-  color: white;
-}
-
-.car-actions .btn.bg-green:hover {
-  background: linear-gradient(135deg, #20c997, #28a745);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
-}
+/* Option Checkboxes => ends */
 
 /* Responsive Design for Car Showcase */
 @media (max-width: 1200px) {
@@ -912,7 +714,6 @@ body {
   color: white;
   text-align: center;
   padding: 2rem 0;
-  margin-top: 4rem;
 }
 
 /* Responsive design */
@@ -1002,12 +803,4 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.header-content {
-  animation: fadeInUp 1s ease-out;
-}
-
-.card {
-  animation: fadeInUp 0.6s ease-out;
 }
