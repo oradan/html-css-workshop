@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // This demonstrates how a parent component manages child component state
 
   // Get all favorite buttons (child components)
-  const favoriteButtons = document.querySelectorAll(".btn.bg-gray");
+  const favoriteButtons = document.querySelectorAll(".btn.btn-primary");
   // Get all favorite heart overlays
   const favoriteHearts = document.querySelectorAll(".favorite-heart");
 
