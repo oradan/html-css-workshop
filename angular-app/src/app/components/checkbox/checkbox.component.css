@@ -1,0 +1,39 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+.checkbox-input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-label {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.checkbox-input:checked {
+  background: var(--accent-color, #ff6b35);
+  border-color: var(--accent-color, #ff6b35);
+}
+
+.checkbox-input:checked::before {
+  content: "✓";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
