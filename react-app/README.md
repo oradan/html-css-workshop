@@ -9,6 +9,8 @@ npm create vite@latest react-app -- --template react-ts
 cd react-app
 npm install
 ```
+https://github.com/oradan/html-css-workshop
+
 
 ### Install dependencies:
 
