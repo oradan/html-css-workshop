@@ -1,1 +1,18 @@
-<p>nav-bar works!</p>
+<nav class="navbar">
+  <div class="nav-container">
+    <a routerLink="/home" class="logo" routerLinkActive="active">Car World</a>
+    <div class="nav-right">
+      <ul class="nav-menu">
+        <li><a routerLink="/home" class="nav-link" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/news" class="nav-link" routerLinkActive="active">News</a></li>
+        <li><a routerLink="/cars" class="nav-link"routerLinkActive="active">Cars</a></li>
+      </ul>
+      <div class="cart-container">
+        <div class="cart-link">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge">0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

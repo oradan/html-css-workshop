@@ -1,1 +1,17 @@
-<p>header works!</p>
+<header
+  class="header header-bg"
+  [style.--bg-url]="'url(./assets/' + bgImgUrl() + ')'"
+>
+  <div class="header-content">
+    <h1>{{ title() }}</h1>
+    <p>{{ content() }}</p>
+    @if(showButton()){
+    <app-button
+      [buttonLabel]="buttonLabel()"
+      [buttonIcon]="buttonIcon()"
+      (buttonClicked)="onHeaderButtonClick()"
+      [buttonType]="buttonType"
+    />
+    }
+  </div>
+</header>

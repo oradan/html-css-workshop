@@ -1,1 +1,21 @@
-<p>home works!</p>
+<app-header
+  title="Welcome to Car World"
+  [content]="headerContent"
+  [bgImgUrl]="headerBgUrl"
+  buttonLabel="Explore Cars"
+  (headerButtonClicked)="navigateTo(appRoutesEnum.Cars)"
+/>
+<main class="main-content">
+  <!-- Title Description Block -->
+  <div class="title-description-block dashed-border">
+    <h2 class="page-title">Your Gateway to Automotive Excellence</h2>
+    <p class="page-subtitle">
+      Stay connected with the automotive world through our comprehensive
+      platform featuring the latest news, detailed car reviews, and everything
+      you need to know about the vehicles that drive our passion.
+    </p>
+  </div>
+
+  <div class="features">
+  </div>
+</main>
