@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { CarDto } from "../../dtos/CarDto";
 import CarOptionItem from "./CarOptionItem";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import Button from "../Button";
+import { ButtonType } from "../../dtos/Enums";
 
 interface IOwnProps {
   car: CarDto;
@@ -62,17 +64,15 @@ export default function CarCard(props: IOwnProps) {
             ))}
           </div>
           <div className="car-actions">
-            {/* <MyButton
+            <Button
               icon={faHeart}
-              text={
+              label={
                 car.addedToFavourites
                   ? "Added to favorites "
                   : "Add to Favorites"
               }
-              className={car.addedToFavourites ? " favorited" : ""}
-              iconClassName={car.addedToFavourites ? "favorited" : ""}
               buttonType={ButtonType.Primary}
-            /> */}
+            />
           </div>
         </div>
       </div>
