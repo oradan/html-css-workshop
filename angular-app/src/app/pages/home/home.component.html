@@ -17,5 +17,25 @@
   </div>
 
   <div class="features">
+    <app-card
+      title="Latest News"
+      content="Stay updated with breaking news from the automotive industry, including new releases, technology updates, and market trends."
+      buttonLabel="Read News"
+      buttonIcon="fa-newspaper"
+      (cardButtonClicked)="navigateTo(appRoutesEnum.News)"
+    />
+    <app-card
+      title="Car Collection"
+      content="Explore our extensive database of vehicles from classic cars to modern supercars, with detailed specifications and reviews."
+      buttonLabel="Explore Cars"
+      buttonIcon="fa-car"
+      [cardVariant]="cardVariantEnum.Featured"
+      (cardButtonClicked)="navigateTo(appRoutesEnum.Cars)"
+    />
+    <app-card
+      title="Expert Reviews"
+      content="Read in-depth reviews and analysis from automotive experts to help you make informed decisions about your next vehicle."
+      buttonLabel="Btn with no action"
+    />
   </div>
 </main>

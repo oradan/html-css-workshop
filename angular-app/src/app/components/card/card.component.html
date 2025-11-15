@@ -1,1 +1,15 @@
-<p>card works!</p>
+<div class="card" [class.featured]="cardVariant() === cardVariantEnum.Featured">
+  <h3>{{ title() }}</h3>
+  @if(imgUrl()) {
+  <img [src]="imgUrl()" alt="nice img " class="card-image" />
+  }
+  <p>{{ content() }}</p>
+  @if(showButton()){
+  <app-button
+    [buttonLabel]="buttonLabel()"
+    [buttonIcon]="buttonIcon()"
+    (buttonClicked)="onCardButtonClick()"
+    [buttonType]="buttonType()"
+  />
+  }
+</div>
