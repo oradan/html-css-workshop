@@ -1,33 +1,82 @@
 import { useEffect, useState } from "react";
 import type { CarDto, CarOptionDto } from "../dtos/CarDto";
 import Header from "../components/Header";
+import CarCard from "../components/cars/CarCard";
 
 export default function CarList() {
-  // const [cars, setCars] = useState<CarDto[]>([]);
-  // useEffect(() => {
-  //   fetch("/resources/cars.json")
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       // Initialize totalPrice with basePrice for each car
-  //       const initializedCars = data.map((car: CarDto) => ({
-  //         ...car,
-  //         addedToFavourites: false,
-  //         pricing: {
-  //           ...car.pricing,
-  //           totalPrice: car.pricing.basePrice,
-  //           totalPriceFormatted: car.pricing.basePriceFormatted,
-  //           optionTotalPrice: 0,
-  //           optionTotalPriceFormatted: "$0",
-  //         },
-  //         options: car.options.map((option: CarOptionDto) => ({
-  //           ...option,
-  //           selected: false,
-  //         })),
-  //       }));
-  //       setCars(initializedCars);
-  //     })
-  //     .catch((error) => console.error("Error fetching cars:", error));
-  // }, []);
+  const [cars, setCars] = useState<CarDto[]>([]);
+  useEffect(() => {
+    fetch("/resources/cars.json")
+      .then((response) => response.json())
+      .then((data) => {
+        // Initialize totalPrice with basePrice for each car
+        const initializedCars = data.map((car: CarDto) => ({
+          ...car,
+          addedToFavourites: false,
+          pricing: {
+            ...car.pricing,
+            totalPrice: car.pricing.basePrice,
+            totalPriceFormatted: car.pricing.basePriceFormatted,
+            optionTotalPrice: 0,
+            optionTotalPriceFormatted: "$0",
+          },
+          options: car.options.map((option: CarOptionDto) => ({
+            ...option,
+            selected: false,
+          })),
+        }));
+        setCars(initializedCars);
+      })
+      .catch((error) => console.error("Error fetching cars:", error));
+  }, []);
+
+  const addCarToFavourites = (car: CarDto) => {
+    setCars((prevCars) =>
+      prevCars.map((c) =>
+        c.title === car.title
+          ? { ...c, addedToFavourites: !c.addedToFavourites }
+          : c
+      )
+    );
+  };
+
+  const handleOptionChange = (
+    car: CarDto,
+    option: CarOptionDto,
+    isSelected: boolean
+  ) => {
+    setCars((prevCars) =>
+      prevCars.map((c) => {
+        if (c.title === car.title) {
+          // Update the selected state of the option
+          const updatedOptions = c.options.map((opt) =>
+            opt.name === option.name ? { ...opt, selected: isSelected } : opt
+          );
+
+          // Calculate new total price from selected options
+          let optionsTotal = 0;
+          updatedOptions
+            .filter((opt) => opt.selected)
+            .forEach((opt) => (optionsTotal += opt.price));
+
+          const newTotalPrice = c.pricing.basePrice + optionsTotal;
+
+          return {
+            ...c,
+            options: updatedOptions,
+            pricing: {
+              ...c.pricing,
+              totalPrice: newTotalPrice,
+              totalPriceFormatted: `$${newTotalPrice.toLocaleString()}`,
+              optionTotalPrice: optionsTotal,
+              optionTotalPriceFormatted: `$${optionsTotal.toLocaleString()}`,
+            },
+          };
+        }
+        return c;
+      })
+    );
+  };
 
   return (
     <>
@@ -52,11 +101,18 @@ export default function CarList() {
           </p>
         </div>
 
-        {/* <div className="car-showcase" id="collection">
+        <div className="car-showcase" id="collection">
           {cars.map((car) => {
-            return <CarCard key={car.title} car={car} />;
+            return (
+              <CarCard
+                key={car.title}
+                car={car}
+                addCarToFavourites={addCarToFavourites}
+                handleOptionChange={handleOptionChange}
+              />
+            );
           })}
-        </div> */}
+        </div>
       </main>
     </>
   );

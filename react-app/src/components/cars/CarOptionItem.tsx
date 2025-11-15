@@ -3,12 +3,17 @@ import type { CarDto, CarOptionDto } from "../../dtos/CarDto";
 interface IOwnProps {
   car: CarDto;
   option: CarOptionDto;
+  onOptionChange: (
+    car: CarDto,
+    option: CarOptionDto,
+    isSelected: boolean
+  ) => void;
 }
 
 export default function CarOptionItem(props: IOwnProps) {
-  const { car, option } = props;
+  const { car, option, onOptionChange } = props;
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // TODO: Implement option change handling
+    onOptionChange(car, option, e.target.checked);
   };
 
   return (

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import type { CarDto } from "../../dtos/CarDto";
+import type { CarDto, CarOptionDto } from "../../dtos/CarDto";
 import CarOptionItem from "./CarOptionItem";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import Button from "../Button";
@@ -7,11 +7,21 @@ import { ButtonType } from "../../dtos/Enums";
 
 interface IOwnProps {
   car: CarDto;
+  addCarToFavourites?: (car: CarDto) => void;
+  handleOptionChange: (
+    car: CarDto,
+    option: CarOptionDto,
+    isSelected: boolean
+  ) => void;
 }
 
 export default function CarCard(props: IOwnProps) {
-  const { car } = props;
-
+  const { car, addCarToFavourites, handleOptionChange } = props;
+  const handleAddToFavourites = () => {
+    if (addCarToFavourites) {
+      addCarToFavourites(car);
+    }
+  };
   return (
     <div className={"car-item " + (car.addedToFavourites ? " favorited" : "")}>
       <div className="car-image-container">
@@ -60,7 +70,12 @@ export default function CarCard(props: IOwnProps) {
           <h4 className="options-title">Available Options</h4>
           <div className="options-list">
             {car.options.map((option, index) => (
-              <CarOptionItem car={car} key={index} option={option} />
+              <CarOptionItem
+                car={car}
+                key={index}
+                option={option}
+                onOptionChange={handleOptionChange}
+              />
             ))}
           </div>
           <div className="car-actions">
@@ -71,7 +86,10 @@ export default function CarCard(props: IOwnProps) {
                   ? "Added to favorites "
                   : "Add to Favorites"
               }
+              className={car.addedToFavourites ? " favorited" : ""}
+              iconClassName={car.addedToFavourites ? "favorited" : ""}
               buttonType={ButtonType.Primary}
+              onClick={() => handleAddToFavourites()}
             />
           </div>
         </div>
