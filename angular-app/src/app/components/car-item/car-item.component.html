@@ -1,7 +1,7 @@
 <div class="car-item">
   <div class="car-image-container">
     <img [src]="carItem().image" [alt]="carItem().imageAlt" class="car-image" />
-    <div class="favorite-heart">
+    <div class="favorite-heart" [class.favorite]="carItem().addedToFavorites">
       <i class="fas fa-heart"></i>
     </div>
   </div>
@@ -29,14 +29,19 @@
   </div>
   <div class="car-actions-column">
     <div class="price-section">
-      <span class="price">placeholder for total price</span>
+      <span class="price">{{
+        totalPrice() | currency : "USD" : "symbol" : "0.0-0"
+      }}</span>
       <div class="price-breakdown">
         <span class="base-price"
           >Base:
           {{ carItem().price | currency : "USD" : "symbol" : "0.0-0" }}</span
         >
         <span class="options-total"
-          >Options: placeholder for total Options Price </span
+          >Options:
+          {{
+            totalOptionsPrice() | currency : "USD" : "symbol" : "0.0-0"
+          }}</span
         >
       </div>
     </div>
@@ -48,20 +53,23 @@
           <app-checkbox
             [checked]="carOption.selected"
             [label]="carOption.name"
-            (checkedChange)="onSelectedOption()"
+            (checkedChange)="onSelectedOption($event, carOption)"
           />
           <span class="option-price"
-            >+
-            {{ carOption.price | currency : "USD" : "symbol" : "0.0-0" }}</span
+            >+ {{
+              carOption.price | currency : "USD" : "symbol" : "0.0-0"
+            }}</span
           >
         </div>
         }
-      </div>
+      </div> 
     </div>
     <div class="car-actions">
       <app-button
         [class.favorite]="carItem().addedToFavorites"
-        buttonLabel="Add to Favorites"
+        [buttonLabel]="
+          carItem().addedToFavorites ? 'added to favorites' : 'add to favorites'
+        "
         buttonIcon="fa-heart"
         (buttonClicked)="addToFavorites()"
         [buttonType]="buttonType.Primary"

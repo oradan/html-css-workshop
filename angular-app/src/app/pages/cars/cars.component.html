@@ -1,1 +1,23 @@
-<p>cars works!</p>
+<app-header
+  title="Discover Amazing Cars"
+  [content]="headerContent"
+  [bgImgUrl]="headerBgUrl"
+  [showButton]="false"
+/>
+
+<main class="main-content">
+  <!-- Title Description Block -->
+  <div class="title-description-block">
+    <h1 class="page-title">Car Collection</h1>
+    <p class="page-subtitle">
+      Explore our comprehensive collection of vehicles, from classic beauties to
+      cutting-edge modern machines. Discover detailed specifications, features,
+      and everything you need to know about each car.
+    </p>
+  </div>
+  <div class="car-showcase">
+    @for(carItem of cars; track carItem.title){
+    <app-car-item [carItem]="carItem" />
+    }
+  </div>
+</main>
